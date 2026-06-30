@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <title>password generator</title>
+    <style>
+        body{
+            box-sizing: border-box;
+            font-family:Arial, Helvetica, sans-serif;
+            max-width: 100vh;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background:linear-gradient(to right bottom, #ffa585, #45c);
+            color: white;
+            
+        }
+        .container{
+            border: 1px solid white;
+            border-radius: 10px;
+            padding: 28px 32px;
+            display: flex;
+            flex-direction: column;
+            background-color: transparent;
+            box-shadow: 8px 8px 4px #909090 ,8px 8px 0px #575757;
+        }
+        .container h1{
+            font-size: 25px;
+          margin-block: 8px;
+        }
+        .passBox{
+            background-color: white;
+            border: none;
+            outline: none;
+            padding: 10px;
+            width: 300px;
+            border-radius: 4px;
+            font-size: 20px;
+            margin-block: 8px;
+            text-overflow: ellipsis;
+            font-weight: 500;
+        }
+        .row{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .row p{
+            flex-basis: 100%;
+            font-size: 18px;
+        }
+        .row input[type="checkbox"]{
+            width: 20px;
+            height: 20px;
+        }
+        .generateBtn{
+            background-color: #2c169e;
+            border: none;
+            outline: none;
+            color: white;
+            font-size: 18px;
+            margin-block: 8px;
+            font-weight: 700;
+            border-radius: 4px;
+            padding: 12px ;
+        }
+        .generateBtn:hover{
+            background-color: #0066ff;
+        }
+        .inputBox{
+            position: relative;
+        }
+        .inputBox span{
+            position: absolute;
+            top: 16px;
+            right: 6px;
+            color: black;
+            font-size: 28px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Password generator</h1>
+        <div class="inputBox">
+            <input type="text" class="passBox"id="passBox" disabled/>
+            <span class="material-icons" id="copyIcon">content_copy</span>
+        </div>
+        <input type="range" min="0" max="30" value="8" id="inputSlider">
+        <div class="row">
+        <p>Password Length</p>
+        <span id="sliderValue">4</span>
+        </div>
+ <div class="row">
+        <label for="lowercase">Include lowercase letters (a-z)</label>
+    <input type="checkbox" name="lowercase" id="lowercase">
+</div>
+
+<div class="row">
+        <label for="uppercase">Include uppercase letters (A-Z)</label>
+    <input type="checkbox"name="uppercase"id="uppercase">
+</div> 
+
+<div class="row">
+        <label for="numbers">Include numbers  (0-9)</label>
+    <input type="checkbox" name="numbers" id="numbers">
+</div>
+
+<div class="row">
+        <label for="symbols">Include Symbols (@-*)</label>
+    <input type="checkbox" name="symbols" id="symbols">
+</div>
+
+<button type="button" class="generateBtn" id="generateBtn">Generate Password</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html
+
