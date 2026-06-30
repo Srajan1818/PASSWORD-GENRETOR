@@ -53,7 +53,7 @@ This project was created to strengthen the following concepts:
 
 ## 🌐 Live Demo
 
-👉 **[Click here to view the app](https://your-username.github.io/password-generator/)**
+👉 **[Click here to view the app](https://srajan1818.github.io/PASSWORD_GENERATOR/)**
 
 ---
 
